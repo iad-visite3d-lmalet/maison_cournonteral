@@ -88,18 +88,13 @@
     document.body.appendChild(bottombar);
 
     // Rétracter le menu latéral Marzipano par défaut sur ordinateur
+// Rétracter le menu latéral Marzipano par défaut sur ordinateur
     setTimeout(function() {
         var toggleBtn = document.getElementById('sceneListToggle');
         var sceneList = document.getElementById('sceneList');
-        if (window.innerWidth > 768 && toggleBtn && sceneList && !sceneList.classList.contains('enabled')) {
-            toggleBtn.click();
+        
+        // S'il y a un grand écran, et que le menu EST ouvert (classe 'enabled')
+        if (window.innerWidth > 768 && toggleBtn && sceneList && sceneList.classList.contains('enabled')) {
+            toggleBtn.click(); // On simule le clic pour le fermer
         }
-    }, 250);
-  }
-
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", injectTheme);
-  } else {
-    injectTheme();
-  }
-})();
+    }, 800); // 800ms pour laisser à Marzipano le temps de s'initialiser d'abord
