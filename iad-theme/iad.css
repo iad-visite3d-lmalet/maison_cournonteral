@@ -1,15 +1,10 @@
-/* iad-theme/iad.css — V12
-   Correctifs :
-   - ne redimensionne plus #pano : les hotspots/flèches Marzipano ne sont plus décalés ;
-   - bandeaux en position fixed : meilleure compatibilité mobile ;
-   - mobile : bandeau bas visible avec Appeler / Email / Site IAD.
-*/
+/* iad-theme/iad.css — V12 (Modifié avec bandeau fin et picto) */
 
 :root {
   --iad-blue: #006b98;
   --iad-blue-light: #009fe3;
   --iad-dark: #062b3f;
-  --iad-top-height: 104px;
+  --iad-top-height: 76px; /* Bandeau réduit pour laisser plus de place à la visite */
   --iad-bottom-height: 82px;
 }
 
@@ -26,7 +21,7 @@ body.iad-themed { font-family: Arial, Helvetica, sans-serif; }
   display: flex;
   align-items: center;
   gap: 26px;
-  padding: 12px 28px;
+  padding: 8px 28px;
   border-bottom: 1px solid rgba(0,0,0,.12);
   box-shadow: 0 4px 18px rgba(0,0,0,.16);
   box-sizing: border-box;
@@ -42,10 +37,10 @@ body.iad-themed { font-family: Arial, Helvetica, sans-serif; }
 }
 
 .iad-logo-img {
-  height: 68px !important;
+  height: 50px !important; /* Taille ajustée au nouveau bandeau */
   width: auto !important;
   max-width: 180px !important;
-  max-height: 68px !important;
+  max-height: 50px !important;
   display: block;
   object-fit: contain;
   flex: 0 0 auto;
@@ -90,6 +85,28 @@ body.iad-themed { font-family: Arial, Helvetica, sans-serif; }
   display: inline-flex;
   align-items: center;
   gap: 10px;
+}
+
+/* Pictogramme de navigation */
+#iad-nav-hint {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centrage parfait */
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  z-index: 9999;
+  pointer-events: none; 
+}
+
+.iad-nav-text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #444444;
+  line-height: 1.2;
+  text-align: left;
 }
 
 /* Icônes SVG */
@@ -165,8 +182,7 @@ body.iad-themed { font-family: Arial, Helvetica, sans-serif; }
   text-decoration: none;
 }
 
-/* Intégration Marzipano
-   Important : #pano n'est plus redimensionné, pour éviter le décalage des hotspots. */
+/* Intégration Marzipano */
 body.iad-themed #titleBar,
 body.iad-themed #autorotateToggle,
 body.iad-themed #fullscreenToggle,
@@ -179,7 +195,6 @@ body.iad-themed #sceneList {
   max-height: calc(100vh - var(--iad-top-height) - var(--iad-bottom-height) - 40px) !important;
 }
 
-/* On évite uniquement que les boutons natifs bas soient masqués, sans toucher aux hotspots. */
 body.iad-themed .viewControlButton-2,
 body.iad-themed .viewControlButton-5,
 body.iad-themed .viewControlButton-6 {
@@ -218,6 +233,10 @@ body.iad-themed .viewControlButton-6 {
   }
 
   .iad-button .iad-svg { width: 22px; height: 22px; }
+
+  #iad-nav-hint {
+    display: none; /* Masqué sur mobile par manque de place */
+  }
 
   #iadBottombar {
     height: var(--iad-bottom-height);
@@ -272,6 +291,8 @@ body.iad-themed .viewControlButton-6 {
   .iad-agent span { display: none; }
   .iad-phone-top { display: inline-flex; font-size: 15px; }
   .iad-button { padding: 8px 12px; font-size: 13px; }
+  
+  #iad-nav-hint { display: none; }
 
   #iadBottombar { height: var(--iad-bottom-height); padding: 5px 9px; }
 
