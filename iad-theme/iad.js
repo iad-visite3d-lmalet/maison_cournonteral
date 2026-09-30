@@ -1,4 +1,4 @@
-/* iad-theme/iad.js — V12 (Modifié : picto de navigation et menu rétractable) */
+/* iad-theme/iad.js — V12 (Correctifs finaux : encodage et menu) */
 
 (function () {
   "use strict";
@@ -25,6 +25,8 @@
 
     var topbar = document.createElement("header");
     topbar.id = "iadTopbar";
+    
+    // L'utilisation des entités HTML ci-dessous (&Eacute;, &#39;) évite les plantages de script liés à l'encodage
     topbar.innerHTML = `
       <div class="iad-brand">
         <img class="iad-logo-img" src="iad-theme/logo-iad-bleu.png" alt="iad immobilier">
@@ -40,7 +42,7 @@
             <path d="M10 9h4V6h3l-5-5-5 5h3v3zm-1 1H6V7l-5 5 5 5v-3h3v-4zm14 2l-5-5v3h-3v4h3v3l5-5zm-9 3h-4v3H7l5 5 5-5h-3v-3z"/>
         </svg>
         <div class="iad-nav-text">
-            CLIQUEZ ET DÉPLACEZ<br>L'IMAGE POUR NAVIGUER
+            CLIQUEZ ET D&Eacute;PLACEZ<br>L&#39;IMAGE POUR NAVIGUER
         </div>
       </div>
 
@@ -86,29 +88,6 @@
 
     document.body.insertBefore(topbar, document.body.firstChild);
     document.body.appendChild(bottombar);
-
-    // Rétracter le menu latéral Marzipano (Méthode 100% robuste)
-    var attempts = 0;
-    var closeMenuInterval = setInterval(function() {
-        var sceneList = document.getElementById('sceneList');
-        var toggleBtn = document.getElementById('sceneListToggle');
-        
-        // On vérifie si le menu a été déployé par Marzipano
-        if (sceneList && sceneList.classList.contains('enabled')) {
-            // On retire la classe 'enabled' pour refermer le menu
-            sceneList.classList.remove('enabled');
-            if (toggleBtn) {
-                toggleBtn.classList.remove('enabled');
-            }
-            clearInterval(closeMenuInterval); // Arrête la boucle une fois l'action effectuée
-        }
-        
-        // Sécurité : on arrête la boucle après 30 tentatives (soit 1,5s au total)
-        attempts++;
-        if (attempts > 30) {
-            clearInterval(closeMenuInterval); 
-        }
-    }, 50);
   }
 
   if (document.readyState === "loading") {
@@ -116,4 +95,15 @@
   } else {
     injectTheme();
   }
+
+  // Rétracter silencieusement le menu une fois que Marzipano a fini de charger
+  window.addEventListener('load', function() {
+    setTimeout(function() {
+        var sceneList = document.getElementById('sceneList');
+        var toggleBtn = document.getElementById('sceneListToggle');
+        if (sceneList) sceneList.classList.remove('enabled');
+        if (toggleBtn) toggleBtn.classList.remove('enabled');
+    }, 500);
+  });
+
 })();
