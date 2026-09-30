@@ -1,4 +1,4 @@
-/* iad-theme/iad.js — V12 (Modifié avec picto navigation) */
+/* iad-theme/iad.js — V12 (Modifié avec picto navigation et menu rétractable) */
 
 (function () {
   "use strict";
@@ -38,7 +38,6 @@
       <div id="iad-nav-hint">
         <svg viewBox="0 0 24 24" width="32" height="32" fill="#4A6482">
             <path d="M10 9h4V6h3l-5-5-5 5h3v3zm-1 1H6V7l-5 5 5 5v-3h3v-4zm14 2l-5-5v3h-3v4h3v3l5-5zm-9 3h-4v3H7l5 5 5-5h-3v-3z"/>
-            <path d="M14.5 13.5v-5c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v4.5l-2.42-.48c-.28-.06-.57.04-.75.27l-.83.99 4.12 4.12c.28.28.66.44 1.06.44h4.32c.76 0 1.35-.6 1.48-1.35l.6-3.65c.07-.42-.04-.84-.31-1.16l-2.27-2.68V13.5z"/>
         </svg>
         <div class="iad-nav-text">
             CLIQUEZ ET DÉPLACEZ<br>L'IMAGE POUR NAVIGUER
@@ -87,6 +86,15 @@
 
     document.body.insertBefore(topbar, document.body.firstChild);
     document.body.appendChild(bottombar);
+
+    // Rétracter le menu latéral Marzipano par défaut sur ordinateur
+    setTimeout(function() {
+        var toggleBtn = document.getElementById('sceneListToggle');
+        var sceneList = document.getElementById('sceneList');
+        if (window.innerWidth > 768 && toggleBtn && sceneList && !sceneList.classList.contains('enabled')) {
+            toggleBtn.click();
+        }
+    }, 250);
   }
 
   if (document.readyState === "loading") {
