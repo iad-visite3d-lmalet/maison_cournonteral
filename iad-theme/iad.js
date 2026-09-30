@@ -1,4 +1,4 @@
-/* iad-theme/iad.js — V12 (Modifié avec picto navigation et menu rétractable) */
+/* iad-theme/iad.js — V12 (Modifié : picto de navigation et menu rétractable) */
 
 (function () {
   "use strict";
@@ -87,14 +87,33 @@
     document.body.insertBefore(topbar, document.body.firstChild);
     document.body.appendChild(bottombar);
 
-    // Rétracter le menu latéral Marzipano par défaut sur ordinateur
-// Rétracter le menu latéral Marzipano par défaut sur ordinateur
-    setTimeout(function() {
-        var toggleBtn = document.getElementById('sceneListToggle');
+    // Rétracter le menu latéral Marzipano (Méthode 100% robuste)
+    var attempts = 0;
+    var closeMenuInterval = setInterval(function() {
         var sceneList = document.getElementById('sceneList');
+        var toggleBtn = document.getElementById('sceneListToggle');
         
-        // S'il y a un grand écran, et que le menu EST ouvert (classe 'enabled')
-        if (window.innerWidth > 768 && toggleBtn && sceneList && sceneList.classList.contains('enabled')) {
-            toggleBtn.click(); // On simule le clic pour le fermer
+        // On vérifie si le menu a été déployé par Marzipano
+        if (sceneList && sceneList.classList.contains('enabled')) {
+            // On retire la classe 'enabled' pour refermer le menu
+            sceneList.classList.remove('enabled');
+            if (toggleBtn) {
+                toggleBtn.classList.remove('enabled');
+            }
+            clearInterval(closeMenuInterval); // Arrête la boucle une fois l'action effectuée
         }
-    }, 800); // 800ms pour laisser à Marzipano le temps de s'initialiser d'abord
+        
+        // Sécurité : on arrête la boucle après 30 tentatives (soit 1,5s au total)
+        attempts++;
+        if (attempts > 30) {
+            clearInterval(closeMenuInterval); 
+        }
+    }, 50);
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", injectTheme);
+  } else {
+    injectTheme();
+  }
+})();
