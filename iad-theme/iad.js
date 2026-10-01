@@ -1,4 +1,4 @@
-/* iad-theme/iad.js — V12 */
+/* iad-theme/iad.js — V12 (Correctifs finaux : encodage et menu) */
 
 (function () {
   "use strict";
@@ -25,6 +25,8 @@
 
     var topbar = document.createElement("header");
     topbar.id = "iadTopbar";
+    
+    // L'utilisation des entités HTML ci-dessous (&Eacute;, &#39;) évite les plantages de script liés à l'encodage
     topbar.innerHTML = `
       <div class="iad-brand">
         <img class="iad-logo-img" src="iad-theme/logo-iad-bleu.png" alt="iad immobilier">
@@ -33,6 +35,15 @@
       <div class="iad-agent">
         <strong>${config.agentName}</strong>
         <span>${config.role}</span>
+      </div>
+
+      <div id="iad-nav-hint">
+        <svg viewBox="0 0 24 24" width="32" height="32" fill="#4A6482">
+            <path d="M10 9h4V6h3l-5-5-5 5h3v3zm-1 1H6V7l-5 5 5 5v-3h3v-4zm14 2l-5-5v3h-3v4h3v3l5-5zm-9 3h-4v3H7l5 5 5-5h-3v-3z"/>
+        </svg>
+        <div class="iad-nav-text">
+            CLIQUEZ ET D&Eacute;PLACEZ<br>L&#39;IMAGE POUR NAVIGUER
+        </div>
       </div>
 
       <div class="iad-top-spacer"></div>
@@ -84,4 +95,15 @@
   } else {
     injectTheme();
   }
+
+  // Rétracter silencieusement le menu une fois que Marzipano a fini de charger
+  window.addEventListener('load', function() {
+    setTimeout(function() {
+        var sceneList = document.getElementById('sceneList');
+        var toggleBtn = document.getElementById('sceneListToggle');
+        if (sceneList) sceneList.classList.remove('enabled');
+        if (toggleBtn) toggleBtn.classList.remove('enabled');
+    }, 500);
+  });
+
 })();
