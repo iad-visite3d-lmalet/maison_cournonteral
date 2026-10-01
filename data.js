@@ -1,8 +1,8 @@
 var APP_DATA = {
   "scenes": [
     {
-      "id": "0-ext-entree-porte",
-      "name": "ext entree porte",
+      "id": "0-entree-princiale",
+      "name": "Entree princiale",
       "levels": [
         {
           "tileSize": 256,
@@ -33,7 +33,7 @@ var APP_DATA = {
           "yaw": 1.2166344561618931,
           "pitch": 0.2599818013311399,
           "rotation": 0,
-          "target": "1-ext-entree-terrasse"
+          "target": "1-entree-centrale"
         },
         {
           "yaw": 2.3855846833541987,
@@ -45,14 +45,14 @@ var APP_DATA = {
           "yaw": 0.6007290424099754,
           "pitch": 0.07252989378180885,
           "rotation": 0,
-          "target": "23-ext-gauche"
+          "target": "23-cote-gauche"
         }
       ],
       "infoHotspots": []
     },
     {
-      "id": "1-ext-entree-terrasse",
-      "name": "ext entree terrasse",
+      "id": "1-entree-centrale",
+      "name": "Entree centrale",
       "levels": [
         {
           "tileSize": 256,
@@ -83,32 +83,32 @@ var APP_DATA = {
           "yaw": -0.7243388679994176,
           "pitch": 0.06135931434573649,
           "rotation": 0,
-          "target": "2-entree"
+          "target": "2-entree-maison"
         },
         {
           "yaw": 0.0023997180012145236,
           "pitch": -0.022941697497941504,
           "rotation": 0,
-          "target": "22-ext-entree-arbre"
+          "target": "22-entree-arbre"
         },
         {
           "yaw": 0.7885245198541568,
           "pitch": 0.1949020117030127,
           "rotation": 0,
-          "target": "0-ext-entree-porte"
+          "target": "0-entree-princiale"
         },
         {
           "yaw": -2.3924120638511734,
           "pitch": 0.02913802731384152,
           "rotation": 0,
-          "target": "23-ext-gauche"
+          "target": "23-cote-gauche"
         }
       ],
       "infoHotspots": []
     },
     {
-      "id": "2-entree",
-      "name": "entree",
+      "id": "2-entree-maison",
+      "name": "Entree maison",
       "levels": [
         {
           "tileSize": 256,
@@ -145,13 +145,13 @@ var APP_DATA = {
           "yaw": -0.17165155395083076,
           "pitch": 0.38604751098521284,
           "rotation": 0,
-          "target": "4-salle-a-mannger"
+          "target": "4-salle-a-manger"
         },
         {
           "yaw": 1.8591648575262933,
           "pitch": 0.29591000957089975,
           "rotation": 0,
-          "target": "1-ext-entree-terrasse"
+          "target": "1-entree-centrale"
         },
         {
           "yaw": -2.7478510453976135,
@@ -163,14 +163,14 @@ var APP_DATA = {
           "yaw": -1.5461240336698907,
           "pitch": 0.4043272547303989,
           "rotation": 0,
-          "target": "8-entree-cot-nuit"
+          "target": "8-entree-nuit"
         }
       ],
       "infoHotspots": []
     },
     {
       "id": "3-salon",
-      "name": "salon",
+      "name": "Salon",
       "levels": [
         {
           "tileSize": 256,
@@ -201,13 +201,13 @@ var APP_DATA = {
           "yaw": -1.2081652885838086,
           "pitch": 0.38486885241519175,
           "rotation": 0,
-          "target": "4-salle-a-mannger"
+          "target": "4-salle-a-manger"
         },
         {
           "yaw": -2.503383173884762,
           "pitch": 0.24431310988133959,
           "rotation": 0,
-          "target": "2-entree"
+          "target": "2-entree-maison"
         },
         {
           "yaw": -1.7888054098851978,
@@ -219,8 +219,8 @@ var APP_DATA = {
       "infoHotspots": []
     },
     {
-      "id": "4-salle-a-mannger",
-      "name": "salle a mannger",
+      "id": "4-salle-a-manger",
+      "name": "Salle a manger",
       "levels": [
         {
           "tileSize": 256,
@@ -263,14 +263,14 @@ var APP_DATA = {
           "yaw": 2.5556426639544343,
           "pitch": 0.3418496023568558,
           "rotation": 0,
-          "target": "2-entree"
+          "target": "2-entree-maison"
         }
       ],
       "infoHotspots": []
     },
     {
       "id": "5-cuisine",
-      "name": "cuisine",
+      "name": "Cuisine",
       "levels": [
         {
           "tileSize": 256,
@@ -307,7 +307,7 @@ var APP_DATA = {
           "yaw": 0.28993598791610253,
           "pitch": 0.2727991822914859,
           "rotation": 0,
-          "target": "4-salle-a-mannger"
+          "target": "4-salle-a-manger"
         },
         {
           "yaw": -0.9407655578644061,
@@ -320,7 +320,7 @@ var APP_DATA = {
     },
     {
       "id": "6-cuisine-verriere",
-      "name": "cuisine verriere",
+      "name": "Cuisine verriere",
       "levels": [
         {
           "tileSize": 256,
@@ -363,14 +363,14 @@ var APP_DATA = {
           "yaw": 0.736605546203883,
           "pitch": 0.14386404885594573,
           "rotation": 0,
-          "target": "4-salle-a-mannger"
+          "target": "4-salle-a-manger"
         }
       ],
       "infoHotspots": []
     },
     {
       "id": "7-salle-piano",
-      "name": "salle piano",
+      "name": "Salle piano",
       "levels": [
         {
           "tileSize": 256,
@@ -401,14 +401,14 @@ var APP_DATA = {
           "yaw": 1.478047377436603,
           "pitch": 0.5642197788168719,
           "rotation": 0,
-          "target": "2-entree"
+          "target": "2-entree-maison"
         }
       ],
       "infoHotspots": []
     },
     {
-      "id": "8-entree-cot-nuit",
-      "name": "entree coté nuit",
+      "id": "8-entree-nuit",
+      "name": "Entree nuit",
       "levels": [
         {
           "tileSize": 256,
@@ -439,7 +439,7 @@ var APP_DATA = {
           "yaw": -2.8409963172976767,
           "pitch": 0.1984952466905643,
           "rotation": 0,
-          "target": "9-chambre1"
+          "target": "9-chambre-1"
         },
         {
           "yaw": -3.086464258561314,
@@ -451,7 +451,7 @@ var APP_DATA = {
           "yaw": 1.6584795305827758,
           "pitch": 0.14426790844151505,
           "rotation": 0,
-          "target": "1-ext-entree-terrasse"
+          "target": "1-entree-centrale"
         },
         {
           "yaw": 2.3252198840139755,
@@ -475,8 +475,8 @@ var APP_DATA = {
       "infoHotspots": []
     },
     {
-      "id": "9-chambre1",
-      "name": "chambre1",
+      "id": "9-chambre-1",
+      "name": "Chambre 1",
       "levels": [
         {
           "tileSize": 256,
@@ -507,26 +507,26 @@ var APP_DATA = {
           "yaw": -0.9487094229269886,
           "pitch": 0.15091010575631003,
           "rotation": 0,
-          "target": "10-dressing1"
+          "target": "10-dressing-1"
         },
         {
           "yaw": 0.5850143623666462,
           "pitch": 0.22253669421190203,
           "rotation": 0,
-          "target": "11-sdb1"
+          "target": "11-sdb-1"
         },
         {
           "yaw": 2.7715281895271007,
           "pitch": 0.32153828464067935,
           "rotation": 0,
-          "target": "8-entree-cot-nuit"
+          "target": "8-entree-nuit"
         }
       ],
       "infoHotspots": []
     },
     {
-      "id": "10-dressing1",
-      "name": "dressing1",
+      "id": "10-dressing-1",
+      "name": "Dressing 1",
       "levels": [
         {
           "tileSize": 256,
@@ -557,20 +557,20 @@ var APP_DATA = {
           "yaw": 2.2033375346480017,
           "pitch": 0.13048743005191454,
           "rotation": 0,
-          "target": "9-chambre1"
+          "target": "9-chambre-1"
         },
         {
           "yaw": -1.89236256918357,
           "pitch": 0.42227493808071515,
           "rotation": 0,
-          "target": "8-entree-cot-nuit"
+          "target": "8-entree-nuit"
         }
       ],
       "infoHotspots": []
     },
     {
-      "id": "11-sdb1",
-      "name": "sdb1",
+      "id": "11-sdb-1",
+      "name": "SDB 1",
       "levels": [
         {
           "tileSize": 256,
@@ -601,14 +601,14 @@ var APP_DATA = {
           "yaw": 1.8062198314162865,
           "pitch": 0.40077999587324165,
           "rotation": 0,
-          "target": "9-chambre1"
+          "target": "9-chambre-1"
         }
       ],
       "infoHotspots": []
     },
     {
       "id": "12-bureau",
-      "name": "bureau",
+      "name": "Bureau",
       "levels": [
         {
           "tileSize": 256,
@@ -646,7 +646,7 @@ var APP_DATA = {
     },
     {
       "id": "13-couloir",
-      "name": "couloir",
+      "name": "Couloir",
       "levels": [
         {
           "tileSize": 256,
@@ -683,26 +683,26 @@ var APP_DATA = {
           "yaw": -1.943169941085415,
           "pitch": 0.2100700500832442,
           "rotation": 0,
-          "target": "10-dressing1"
+          "target": "10-dressing-1"
         },
         {
           "yaw": -1.4883713093883468,
           "pitch": 0.2129766277807459,
           "rotation": 0,
-          "target": "8-entree-cot-nuit"
+          "target": "8-entree-nuit"
         },
         {
           "yaw": 1.6471293430941252,
           "pitch": 0.3280573800440738,
           "rotation": 0,
-          "target": "14-chambre2"
+          "target": "14-chambre-2-bureau-"
         }
       ],
       "infoHotspots": []
     },
     {
-      "id": "14-chambre2",
-      "name": "chambre2",
+      "id": "14-chambre-2-bureau-",
+      "name": "Chambre 2 bureau ",
       "levels": [
         {
           "tileSize": 256,
@@ -733,7 +733,7 @@ var APP_DATA = {
           "yaw": -1.4576958112843243,
           "pitch": 0.6205651601532072,
           "rotation": 0,
-          "target": "15-chambre2nuit"
+          "target": "15-chambre-2-nuit"
         },
         {
           "yaw": -1.420046009768626,
@@ -745,14 +745,14 @@ var APP_DATA = {
           "yaw": 1.2687662044887595,
           "pitch": 0.20774306993592795,
           "rotation": 0,
-          "target": "8-entree-cot-nuit"
+          "target": "8-entree-nuit"
         }
       ],
       "infoHotspots": []
     },
     {
-      "id": "15-chambre2nuit",
-      "name": "chambre2nuit",
+      "id": "15-chambre-2-nuit",
+      "name": "Chambre 2 nuit",
       "levels": [
         {
           "tileSize": 256,
@@ -789,20 +789,20 @@ var APP_DATA = {
           "yaw": 0.928078524712852,
           "pitch": 0.2901026676825964,
           "rotation": 0,
-          "target": "14-chambre2"
+          "target": "14-chambre-2-bureau-"
         },
         {
           "yaw": 0.5255294157348516,
           "pitch": 0.14191600030413554,
           "rotation": 0,
-          "target": "19-dressing2"
+          "target": "19-couloir-dressing-2"
         }
       ],
       "infoHotspots": []
     },
     {
       "id": "16-mezzanine",
-      "name": "mezzanine",
+      "name": "Mezzanine",
       "levels": [
         {
           "tileSize": 256,
@@ -833,14 +833,14 @@ var APP_DATA = {
           "yaw": 1.1885600746441618,
           "pitch": 0.6795800140911226,
           "rotation": 0,
-          "target": "15-chambre2nuit"
+          "target": "15-chambre-2-nuit"
         }
       ],
       "infoHotspots": []
     },
     {
-      "id": "17-dressing2-et-douche",
-      "name": "dressing2 et douche",
+      "id": "17-dressing-2",
+      "name": "Dressing 2",
       "levels": [
         {
           "tileSize": 256,
@@ -871,14 +871,14 @@ var APP_DATA = {
           "yaw": 1.2809175535180604,
           "pitch": 0.10950430262817079,
           "rotation": 0,
-          "target": "19-dressing2"
+          "target": "19-couloir-dressing-2"
         }
       ],
       "infoHotspots": []
     },
     {
-      "id": "18-sdb2",
-      "name": "sdb2",
+      "id": "18-sdb-2",
+      "name": "SDB 2",
       "levels": [
         {
           "tileSize": 256,
@@ -909,14 +909,14 @@ var APP_DATA = {
           "yaw": 1.4950096401826896,
           "pitch": 0.27126800739826784,
           "rotation": 0,
-          "target": "19-dressing2"
+          "target": "19-couloir-dressing-2"
         }
       ],
       "infoHotspots": []
     },
     {
-      "id": "19-dressing2",
-      "name": "dressing2",
+      "id": "19-couloir-dressing-2",
+      "name": "Couloir dressing 2",
       "levels": [
         {
           "tileSize": 256,
@@ -947,26 +947,26 @@ var APP_DATA = {
           "yaw": 3.1261414079876015,
           "pitch": 0.21325163678246106,
           "rotation": 0,
-          "target": "15-chambre2nuit"
+          "target": "15-chambre-2-nuit"
         },
         {
           "yaw": -2.921731821258126,
           "pitch": 0.2382659537436016,
           "rotation": 0,
-          "target": "17-dressing2-et-douche"
+          "target": "17-dressing-2"
         },
         {
           "yaw": 2.264684554833189,
           "pitch": 0.12779940342191232,
           "rotation": 0,
-          "target": "18-sdb2"
+          "target": "18-sdb-2"
         }
       ],
       "infoHotspots": []
     },
     {
-      "id": "20-ext-arriere-droite",
-      "name": "ext arriere droite",
+      "id": "20-arriere-droite",
+      "name": "Arriere droite",
       "levels": [
         {
           "tileSize": 256,
@@ -1003,14 +1003,14 @@ var APP_DATA = {
           "yaw": 1.2795164149442915,
           "pitch": 0.09602941667557907,
           "rotation": 0,
-          "target": "21-ext-arriere-gauche"
+          "target": "21-arriere-gauche"
         }
       ],
       "infoHotspots": []
     },
     {
-      "id": "21-ext-arriere-gauche",
-      "name": "ext arriere gauche",
+      "id": "21-arriere-gauche",
+      "name": "Arriere gauche",
       "levels": [
         {
           "tileSize": 256,
@@ -1041,20 +1041,20 @@ var APP_DATA = {
           "yaw": -1.7809836114327169,
           "pitch": 0.09613025446773449,
           "rotation": 0,
-          "target": "20-ext-arriere-droite"
+          "target": "20-arriere-droite"
         },
         {
           "yaw": -0.13698690229522015,
           "pitch": 0.04918854463521072,
           "rotation": 0,
-          "target": "23-ext-gauche"
+          "target": "23-cote-gauche"
         }
       ],
       "infoHotspots": []
     },
     {
-      "id": "22-ext-entree-arbre",
-      "name": "ext entree arbre",
+      "id": "22-entree-arbre",
+      "name": "Entree arbre",
       "levels": [
         {
           "tileSize": 256,
@@ -1085,13 +1085,13 @@ var APP_DATA = {
           "yaw": -2.4550378966225104,
           "pitch": -0.034331628801750114,
           "rotation": 0,
-          "target": "1-ext-entree-terrasse"
+          "target": "1-entree-centrale"
         },
         {
           "yaw": -3.083030572218714,
           "pitch": 0.042808610499164956,
           "rotation": 0,
-          "target": "1-ext-entree-terrasse"
+          "target": "1-entree-centrale"
         },
         {
           "yaw": -1.707961735768503,
@@ -1103,8 +1103,8 @@ var APP_DATA = {
       "infoHotspots": []
     },
     {
-      "id": "23-ext-gauche",
-      "name": "ext gauche",
+      "id": "23-cote-gauche",
+      "name": "Cote gauche",
       "levels": [
         {
           "tileSize": 256,
@@ -1135,20 +1135,20 @@ var APP_DATA = {
           "yaw": -1.5651203620614886,
           "pitch": 0.056590345570626255,
           "rotation": 0,
-          "target": "21-ext-arriere-gauche"
+          "target": "21-arriere-gauche"
         },
         {
           "yaw": 0.31430501895151153,
           "pitch": 0.23598781633033816,
           "rotation": 0,
-          "target": "1-ext-entree-terrasse"
+          "target": "1-entree-centrale"
         }
       ],
       "infoHotspots": []
     },
     {
       "id": "24-terrasse-pergola-canisse",
-      "name": "terrasse pergola canisse",
+      "name": "Terrasse pergola canisse",
       "levels": [
         {
           "tileSize": 256,
@@ -1179,7 +1179,7 @@ var APP_DATA = {
           "yaw": 0.022288891147685064,
           "pitch": 0.14920421618453084,
           "rotation": 0,
-          "target": "20-ext-arriere-droite"
+          "target": "20-arriere-droite"
         },
         {
           "yaw": -0.8716751660755229,
@@ -1203,14 +1203,14 @@ var APP_DATA = {
           "yaw": -1.3240230897667669,
           "pitch": 0.02431030255239719,
           "rotation": 0,
-          "target": "22-ext-entree-arbre"
+          "target": "22-entree-arbre"
         }
       ],
       "infoHotspots": []
     },
     {
       "id": "25-terrasse-pergola",
-      "name": "terrasse pergola",
+      "name": "Terrasse pergola",
       "levels": [
         {
           "tileSize": 256,
@@ -1259,7 +1259,7 @@ var APP_DATA = {
           "yaw": 0.5802346697976439,
           "pitch": 0.07348308202007559,
           "rotation": 0,
-          "target": "22-ext-entree-arbre"
+          "target": "22-entree-arbre"
         },
         {
           "yaw": 2.7955077055864948,
@@ -1271,8 +1271,8 @@ var APP_DATA = {
       "infoHotspots": []
     },
     {
-      "id": "26-terrasse-piscine-face",
-      "name": "terrasse piscine face",
+      "id": "26-piscine",
+      "name": "Piscine",
       "levels": [
         {
           "tileSize": 256,
@@ -1316,7 +1316,7 @@ var APP_DATA = {
     },
     {
       "id": "27-terrasse-piscine",
-      "name": "terrasse piscine",
+      "name": "Terrasse piscine",
       "levels": [
         {
           "tileSize": 256,
@@ -1365,20 +1365,20 @@ var APP_DATA = {
           "yaw": 2.8394084424932498,
           "pitch": 0.15954615026959473,
           "rotation": 0,
-          "target": "20-ext-arriere-droite"
+          "target": "20-arriere-droite"
         },
         {
           "yaw": 0.05717964787515584,
           "pitch": 0.01729794283062347,
           "rotation": 0,
-          "target": "22-ext-entree-arbre"
+          "target": "22-entree-arbre"
         }
       ],
       "infoHotspots": []
     },
     {
       "id": "28-pool-house",
-      "name": "pool house",
+      "name": "Pool house",
       "levels": [
         {
           "tileSize": 256,
@@ -1415,13 +1415,13 @@ var APP_DATA = {
           "yaw": 0.9513407405204788,
           "pitch": 0.10363323506950373,
           "rotation": 0,
-          "target": "26-terrasse-piscine-face"
+          "target": "26-piscine"
         }
       ],
       "infoHotspots": []
     }
   ],
-  "name": "maison_cournonteral",
+  "name": "Maison Cournonteral",
   "settings": {
     "mouseViewMode": "drag",
     "autorotateEnabled": false,
